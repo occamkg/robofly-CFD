@@ -23,23 +23,23 @@ inr     0.4;
 
 vertices
 (
-    (-$outt  $outr  $outr)  //0
-    (-$outt -$outr  $outr)  //1
-    (-$outt -$outr -$outr)  //2
-    (-$outt  $outr -$outr)  //3
-    ( $outt  $outr  $outr)  //4
-    ( $outt -$outr  $outr)  //5
-    ( $outt -$outr -$outr)  //6
-    ( $outt  $outr -$outr)  //7
+    ( $outr  $outr -$outt)  //0
+    (-$outr  $outr -$outt)  //1
+    (-$outr -$outr -$outt)  //2
+    ( $outr -$outr -$outt)  //3
+    ( $outr  $outr  $outt)  //4
+    (-$outr  $outr  $outt)  //5
+    (-$outr -$outr  $outt)  //6
+    ( $outr -$outr  $outt)  //7
 
-    (-$int  $inr  $inr)     //8
-    (-$int -$inr  $inr)     //9
-    (-$int -$inr -$inr)     //10
-    (-$int  $inr -$inr)     //11
-    ( $int  $inr  $inr)     //12
-    ( $int -$inr  $inr)     //13
-    ( $int -$inr -$inr)     //14
-    ( $int  $inr -$inr)     //15
+    ( $inr  $inr -$int)     //8
+    (-$inr  $inr -$int)     //9
+    (-$inr -$inr -$int)     //10
+    ( $inr -$inr -$int)     //11
+    ( $inr  $inr  $int)     //12
+    (-$inr  $inr  $int)     //13
+    (-$inr -$inr  $int)     //14
+    ( $inr -$inr  $int)     //15
 );
 
 blocks

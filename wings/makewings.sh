@@ -18,7 +18,7 @@ do
     cd ../..
 
     # create the mesh by running the remesh script
-    # !!~ this can take a while, so only uncomment if you really
-    # want to make all the wing meshes now ~!!
-    ${wing}/remesh.sh
+    # # !!~ this can take a while, so only uncomment if you really
+    # # want to make all the wing meshes now ~!!
+    # ${wing}/remesh.sh
 done

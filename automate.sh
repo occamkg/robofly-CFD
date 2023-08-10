@@ -62,7 +62,7 @@ do
     # rotate the wing to the desired angle of attack
     cp -r wings/wing$camber temp_wing
     cd temp_wing
-    transformPoints -yawPitchRoll "(0 $((angle-90)) 0)"
+    transformPoints -yawPitchRoll "(0 0 $((angle-90)))"
 
     # merge the wing to the background mesh
     cd $write
@@ -96,17 +96,14 @@ cd $working_dir
 mv batch.log $out
 
 # To run:
-#   cd 
 #   # single case at 20° aoa and 10° camber
 #   ${ROTATING}/automate.sh -a 20 -c 10 -o path/to/output > batch.log 2>&1 &
-#   ./automate.sh -a 20 -c 10 -o output/runs/12_working_check/03 > batch.log 2>&1 &
 #   # set of all cases at with 0°:10°:90° aoa and -20°:5°:20° camber
 #   ${ROTATING}/automate.sh -a "0 10 20 30 40 50 60 70 80 90" -c "-20 -15 -10 -5 0 5 10 15 20" -o path/to/output > batch.log 2>&1 &
 #   # set of specific aoa-camber runs (-20° aoa and 20° camber, -10° aoa and 20° camber, ...)
 #   ${ROTATING}/automate.sh -r "-20,20 -10,20 -10,10 100,-10 100,-20 110,-20" -o path/to/output > batch.log 2>&1 &
-#   ./automate.sh -r "-20,20 -20,15 -10,20 -10,15 -10,10 -10,5 100,-5 100,-10 100,-15 100,-20 110,-15 110,-20" -o 08.7_skew_runs > batch.log 2>&1 &
 # flags:
 #   -a "0 10 20"   -- wing leading edge angles of attack (degrees)
 #   -c "0 5"       -- camber angles between each plate (degrees)
-#   -r "0,0 10,0"  -- runs as aoa-c pairs (aoa1,camber1 aoa2,camber2 ...)
+#   -r "0,0 10,0"  -- runs as aoa-camber pairs (aoa1,camber1 aoa2,camber2 ...)
 #   -o ../example  -- output folder (absolute or relative to cwd)

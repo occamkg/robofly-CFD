@@ -22,14 +22,14 @@ def writeFile(ramp, V, end):
         else:
             angle = V/2*((time - end) - ramp/math.pi * math.sin(math.pi/ramp * (time - end))) + (V*(1 + ramp))
 
-        f.write("({0:.4f} ((0 0 0) ({1:.6f} 0 0)))\n".format(time, angle)) # write time step data
+        f.write("({0:.4f} ((0 0 0) (0 0 {1:.6f})))\n".format(time, angle)) # write time step data
     f.write(")") # write closing line
     f.close()
 
 if __name__ == "__main__":
     # initialize values
-    ramp = 2 # seconds
-    V = 60     # radians/second
+    ramp = 2  # seconds
+    V = 60    # radians/second
     end = 5   # seconds
 
     if len(sys.argv) > 1:

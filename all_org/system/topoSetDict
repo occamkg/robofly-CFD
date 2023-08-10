@@ -21,7 +21,7 @@ actions
         type    cellSet;
         action  new;
         source  regionsToCell;
-        insidePoints ((0 -0.5 0));
+        insidePoints ((-0.5 0 0));
     }
 
     {
