@@ -55,7 +55,8 @@ This writes the output to `batch.log` in the current working directory. If you u
 ##### Tips
 * Make sure the kinematics are how you want them before running your cases
 * You can only use cambers that you have wing meshes for in `wings/`
-* If you're not sure where your output is ending up, the first line of the `batch.log` file says it
+* If the folder passed to `-o` already exists, the program will stop to prevent overwriting
+* If you're not sure where your output is ending up, the first line of the `batch.log` file says the absolute path
 
 #### Running a Set of Cases
 
@@ -96,3 +97,11 @@ In `wings/wing_template/system/snappyHexMeshDict`:
 
 In `all_org/constant/turbulenceProperties`:
 * **Turbulence model**: I used the RAS k-ωSST model.
+
+If you would like to use a different name for the folder variable (instead of `ROTATING`), you need to replace the variable in `automate.sh` and `all_org/constant/dynamicMeshDict`.
+
+## Analysis Code
+
+In the `analysis/` folder, there are two Python scripts for analysis:
+* `analysis/3D_plotting/3d_plot.py` plots the Robofly and CFD α-ξ data as 3D surface plots
+* `analysis/wing_properties/wing_stats.py` calculates properties of the wing using the points from the STL files
