@@ -17,9 +17,9 @@ FoamFile
 scale   1;
 
 outt    0.4;
-int     0.2;
 outr    1;
-inr     0.4;
+// int     0.2;
+// inr     0.4;
 
 vertices
 (
@@ -32,14 +32,14 @@ vertices
     (-$outr -$outr  $outt)  //6
     ( $outr -$outr  $outt)  //7
 
-    ( $inr  $inr -$int)     //8
-    (-$inr  $inr -$int)     //9
-    (-$inr -$inr -$int)     //10
-    ( $inr -$inr -$int)     //11
-    ( $inr  $inr  $int)     //12
-    (-$inr  $inr  $int)     //13
-    (-$inr -$inr  $int)     //14
-    ( $inr -$inr  $int)     //15
+    // ( $inr  $inr -$int)     //8
+    // (-$inr  $inr -$int)     //9
+    // (-$inr -$inr -$int)     //10
+    // ( $inr -$inr -$int)     //11
+    // ( $inr  $inr  $int)     //12
+    // (-$inr  $inr  $int)     //13
+    // (-$inr -$inr  $int)     //14
+    // ( $inr -$inr  $int)     //15
 );
 
 blocks
