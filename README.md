@@ -43,9 +43,9 @@ These are also the default values, so running `python rotate_gen.py` will genera
 Cases can be easily run using the `automate.sh` script.
 
 Running a case requires three inputs:
-* -a: an angle of attack (leading edge relative to horizontal, °)
-* -c: a camber (angle at a *single* wing fold, °)
-* -o: a name for the output folder (absolute path or relative to current working directory)
+* `-a`: an angle of attack (leading edge relative to horizontal, °)
+* `-c`: a camber (angle at a *single* wing fold, °)
+* `-o`: a name for the output folder (absolute path or relative to current working directory)
 
 Example: `${ROTATING}/automate.sh -a 20 -c 10 -o path/to/output` runs a case at 20° AOA and 10° camber and writes this case to `path/to/output/`.
 
@@ -61,8 +61,8 @@ This writes the output to `batch.log` in the current working directory. If you u
 #### Running a Set of Cases
 
 If you would instead like to run multiple cases, there are two ways you can do this:
-1. You can provide multiple AOAs (`-a "0 10 20 30"`) and cambers (`-c "-10 0 10"`) and it will run cases for each combination of these AOAs and cambers
-2. You can provide AOA-camber pairs using the `-r` flag: `-r "0,-10 10,10 20,-20 30,20"` will run cases at 0° AOA and -10° camber, 10° AOA and 10° camber, etc.
+* You can provide multiple AOAs (`-a "0 10 20 30"`) and cambers (`-c "-10 0 10"`) and it will run cases for each combination of these AOAs and cambers
+* You can provide AOA-camber pairs using the `-r` flag: `-r "0,-10 10,10 20,-20 30,20"` will run cases at 0° AOA and -10° camber, 10° AOA and 10° camber, etc.
 
 #### Output
 
