@@ -1,14 +1,22 @@
-# Robofly Rigid Cambered Wing CFD Model
+# Robofly Rigid Cambered Wing OpenFOAM CFD Model
 
 ## Description
 
 This repository contains an OpenFOAM CFD model of a moving insect wing with different fixed cambers.
 
+The wing design is from the Robofly wing in the Dickinson Lab at the California Institute of Technology.
+This wing model has a length of 0.245m and three radial hinge axes at which camber can be introduced.
+In this setup, cambers from -20° to 20° at 5° increments are available (where the angle indicates the angle at each hinge joint).
+
+Following the Robofly setup in the Dickinson Lab, the wing in this model is submersed in a fluid with a density of 880kg/m³ and a kinematic viscosity of 1.15e-04m²/s.
+
 The simulation uses a moving wing mesh overset in a stationary background mesh.
 The meshes start with an initial fluid velocity of 0 everywhere with uniform pressure and turbulence parameters.
-All of the sides of the background mesh have `zeroGradient` and the wing surface is treated as a `movingWall`.
+All of the sides of the background mesh have `zeroGradient` and the wing surface is a `movingWall`.
 
 The wing is rotated throughout the simulation using prescribed kinematics.
+The kinematics generation script generates a rotational sweep that starts from 0°/s, sinusoidally ramps up to its full angular velocity, and then sinusoidally ramps back down to 0°/s.
+The results of this model in relation to the angular velocity should only be used when the wing is at its full angular velocity (between the ramp up and ramp down phases).
 
 ## Getting Started
 
